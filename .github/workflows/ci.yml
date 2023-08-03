@@ -27,7 +27,7 @@ jobs:
               run: go install github.com/securego/gosec/v2/cmd/gosec@latest
 
             - name: Run static security checks
-              run: test -z $(gosec ./...)
+              run: gosec ./...
     
     style:
         name: formatting
